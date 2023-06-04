@@ -9,6 +9,8 @@ body {
 	color: #000000;
 }
 
+
+
 /* The width property has been changed to max-width */
 .content-wrapper {
 	max-width: 1200px;
@@ -106,11 +108,13 @@ header nav ul li a {
 .bottom-section {
 	display: flex;
 	justify-content: center;
+	flex-flow: row wrap;
 }
 
 .bottom-section .content-wrapper {
 	border-top: 5px solid #EEE;
 	border-bottom: 5px solid #EEE;
+	flex-flow: row wrap;
 }
 
 .section-one,
@@ -164,4 +168,68 @@ footer span {
 	text-transform: lowercase;
 	color: #45610E;
 	font-size: .875rem;
+}
+
+/******** Tablet Media Query ********/
+@media all and (min-width: 768px) {
+	/*Tablet styles here */
+
+	.bottom-section .content-wrapper {
+		border-top: 5px solid #EEE;
+		border-bottom: 5px solid #EEE;
+		justify-content: space-evenly;
+	}
+
+	.section-one {
+		width: 26%;
+		padding: 0;
+	} 
+	
+	.section-two {
+		width: 40%;
+		border-right: 5px solid #eee;
+		border-left: 5px solid #eee;
+		border-top: none;
+		border-bottom: none;
+		padding: 0 30px;
+	}
+	
+	.section-three {
+		width: 26%;
+		padding: 0;
+	}
+
+}
+
+/******** Desktop Media Query ********/
+@media all and (min-width: 1200px) {
+	/* Desktop sytles here */
+
+	body {
+		font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+		font-size: 1em;
+		color: #000000;
+	}
+
+	header .content-wrapper {
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0;
+	}
+	
+	header h1 {
+		width: 30%;
+		padding: 0;
+		border-bottom: none;
+		text-align: left;
+	}
+
+	header nav {
+		width: 21%;
+	}
+	
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
 }
